@@ -23,11 +23,21 @@ def min_max (x):
     print ("min temp is " + str(x[0]) )
     print ("max temp is " + str(x[-1]))
     return x
+def find_median(x):
+    x.sort()
+    if len(x) % 2 == 0:
+        median = (x[len(x)//2] + x[len(x)//2 - 1]) / 2
+    else:
+        median = x[len(x)//2]
+    print ("median is " + str(median))
+    return 
 
 def main():
     display_main_menu()
     temps = get_user_input()
     get_avg_temp(temps)
     min_max(temps)
+    find_median(temps)
+    
 if __name__ == "__main__":
     main()
